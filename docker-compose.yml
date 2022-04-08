@@ -6,3 +6,17 @@ services:
       - POSTGRES_DB=local_library
       - POSTGRES_USER=local_library
       - POSTGRES_PASSWORD=local_library
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    depends_on:
+      - db
+    ports:
+      - 4200:4200
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    command: yarn start --host 0.0.0.0 --port 4200 --disable-host-check --poll 100
+
