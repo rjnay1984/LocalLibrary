@@ -1,0 +1,8 @@
+services:
+  db:
+    image: postgres
+    restart: always
+    environment:
+      - POSTGRES_DB=local_library
+      - POSTGRES_USER=local_library
+      - POSTGRES_PASSWORD=local_library
