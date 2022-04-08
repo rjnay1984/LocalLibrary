@@ -9,7 +9,8 @@
     "test": "ng test",
     "e2e": "ng e2e",
     "cypress:open": "cypress open",
-    "cypress:run": "cypress run"
+    "cypress:run": "cypress run",
+    "lint": "ng lint"
   },
   "private": true,
   "dependencies": {
@@ -28,14 +29,22 @@
   "devDependencies": {
     "@angular-builders/jest": "latest",
     "@angular-devkit/build-angular": "~13.3.2",
+    "@angular-eslint/builder": "13.2.0",
+    "@angular-eslint/eslint-plugin": "13.2.0",
+    "@angular-eslint/eslint-plugin-template": "13.2.0",
+    "@angular-eslint/schematics": "13.2.0",
+    "@angular-eslint/template-parser": "13.2.0",
     "@angular/cli": "~13.3.2",
     "@angular/compiler-cli": "~13.3.0",
     "@briebug/jest-schematic": "4.0.0",
     "@cypress/schematic": "1.6.0",
     "@types/jest": "latest",
     "@types/node": "^12.11.1",
+    "@typescript-eslint/eslint-plugin": "5.17.0",
+    "@typescript-eslint/parser": "5.17.0",
+    "cypress": "latest",
+    "eslint": "^8.12.0",
     "jest": "latest",
-    "typescript": "~4.6.2",
-    "cypress": "latest"
+    "typescript": "~4.6.2"
   }
 }
