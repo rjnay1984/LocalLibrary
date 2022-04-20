@@ -24,7 +24,7 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: dist folder
-        path: dist
+        path: frontend/dist
   deploy:
     needs: build
     runs-on: ubuntu-latest
