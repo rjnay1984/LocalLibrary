@@ -1,6 +1,8 @@
 const awsconfig = {
-  identityPoolId: 'us-east-2_HgpMvqAUg',
-  region: 'us-east-2',
+  Auth: {
+    identityPoolId: 'us-east-2_HgpMvqAUg',
+    region: 'us-east-2',
+  },
 };
 
 export default awsconfig;

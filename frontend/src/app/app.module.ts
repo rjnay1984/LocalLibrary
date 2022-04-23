@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import Amplify from 'aws-amplify';
+import { Amplify } from 'aws-amplify';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AuthModule } from './auth/auth.module';
 import awsconfig from './aws-exports';
 import { MaterialModule } from './core/material/material.module';
 import { NavigationComponent } from './shared/navigation/navigation.component';
@@ -18,6 +19,7 @@ Amplify.configure(awsconfig);
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
+    AuthModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
