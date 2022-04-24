@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-sign-in',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./sign-in.component.css'],
 })
 export class SignInComponent {
+  hide = true;
+  signInForm = new FormGroup({
+    email: new FormControl('', Validators.required),
+    password: new FormControl('', Validators.required),
+  });
   constructor() {}
 }
