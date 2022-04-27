@@ -42,3 +42,5 @@ testem.log
 Thumbs.db
 
 aws-exports.ts
+cypress/videos
+cypress/screenshots
