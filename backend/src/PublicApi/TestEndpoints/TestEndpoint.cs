@@ -4,7 +4,7 @@ namespace LocalLibrary.PublicApi.TestEndpoints;
 
 public class TestResponse
 {
-    public string message { get; set; }
+    public string? message { get; set; }
 }
 
 public class TestEndpoint : IEndpoint<IResult>

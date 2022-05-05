@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <PackageReference Include="MinimalApi.Endpoint" Version="1.1.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.1" />
   </ItemGroup>
 
 </Project>
