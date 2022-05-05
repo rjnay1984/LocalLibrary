@@ -1,6 +1,9 @@
-var builder = WebApplication.CreateBuilder(args);
-var app = builder.Build();
+using MinimalApi.Endpoint.Extensions;
 
-app.MapGet("/", () => "Hello World!");
+var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddEndpoints();
+
+var app = builder.Build();
+app.MapEndpoints();
 
 app.Run();

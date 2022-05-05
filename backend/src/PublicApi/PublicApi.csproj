@@ -7,4 +7,8 @@
     <RootNamespace>LocalLibrary.PublicApi</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="MinimalApi.Endpoint" Version="1.1.0" />
+  </ItemGroup>
+
 </Project>
