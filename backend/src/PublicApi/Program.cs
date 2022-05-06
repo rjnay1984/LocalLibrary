@@ -1,12 +1,14 @@
-using MinimalApi.Endpoint.Extensions;
-
 var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddEndpoints();
+builder.Services.AddControllers(opt => {
+    opt.UseNamespaceRouteToken();
+});
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
-app.MapEndpoints();
+app.UseEndpoints(endpoints => {
+    endpoints.MapControllers();
+});
 app.UseSwagger();
 app.UseSwaggerUI();
 

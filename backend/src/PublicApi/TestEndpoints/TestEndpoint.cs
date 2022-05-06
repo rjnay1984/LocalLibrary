@@ -1,23 +1,17 @@
-using MinimalApi.Endpoint;
+using Ardalis.ApiEndpoints;
+
+using Microsoft.AspNetCore.Mvc;
 
 namespace LocalLibrary.PublicApi.TestEndpoints;
 
-public class TestResponse
+public class TestEndpoint : EndpointBaseAsync
+    .WithoutRequest
+    .WithResult<TestResponse>
 {
-    public string? message { get; set; }
-}
-
-public class TestEndpoint : IEndpoint<IResult>
-{
-    public void AddRoute(IEndpointRouteBuilder app)
+    [HttpGet("api/[namespace]/")]
+    public override Task<TestResponse> HandleAsync(CancellationToken cancellationToken = default)
     {
-        app.MapGet("/api/test", () => HandleAsync())
-          .Produces<TestResponse>(StatusCodes.Status200OK);
-    }
-
-    public Task<IResult> HandleAsync()
-    {
-        var result = Results.Json(new TestResponse { message = "Sup my dudes"});
-        return Task.FromResult(result);
+        var response = new TestResponse { message = "Sup my dudes" };
+        return Task.FromResult<TestResponse>(response);
     }
 }
